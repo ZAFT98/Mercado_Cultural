@@ -1,5 +1,11 @@
 import React from "react";
-export default function Login ()
+import { useAuth0 } from "@auth0/auth0-react";
+
+const BotonLogin = () =>
 {
-    return(<h1>aaa</h1>)
+    return(
+        <div><h1>Login</h1></div>
+    )
 }
+
+export default BotonLogin;
