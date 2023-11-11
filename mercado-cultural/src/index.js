@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {createBrowserRouter,RouterProvider} from 'react-router-dom';
+import Login from './modulos/Login';
+
+const rutero = createBrowserRouter ([{path:'/', element: <Login/>, errorElement: <h1>Esta pagina no existe, tu ta loco chamo</h1>},]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={rutero}></RouterProvider>
   </React.StrictMode>
 );
 
