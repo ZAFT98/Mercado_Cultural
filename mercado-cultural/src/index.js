@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter,RouterProvider} from 'react-router-dom';
-import BotonLogin from './modulos/Login';
+import LoginButton from './modulos/Login';
 import {Auth0Provider} from '@auth0/auth0-react';
+import Home from './modulos/Home';
 
-const rutero = createBrowserRouter ([{path:'/', element: <BotonLogin />, errorElement: <h1>Esta pagina no existe, tu ta loco chamo</h1>},]);
+const rutero = createBrowserRouter ([{path:'/', element: <LoginButton />, errorElement: <h1>Esta pagina no existe, tu ta loco chamo</h1>},]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,7 +15,9 @@ root.render(
     <Auth0Provider 
     domain='mercado-cultural.us.auth0.com' 
     clientId='CF6Ssr8aT7rePYj6qBrjqZVgMvM2PiHJ' 
-    redirectUri={window.location.origin}>
+    authorizationParams={{
+      redirect_uri: window.location.origin
+    }}>
     <RouterProvider router={rutero}></RouterProvider>
     </Auth0Provider> 
   </React.StrictMode>
