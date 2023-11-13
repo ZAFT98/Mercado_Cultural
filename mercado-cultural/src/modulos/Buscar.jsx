@@ -1,13 +1,18 @@
 import React from "react";
 import Menunavegasao from '../Componentes/BarraNavegasao'
+import LogicaBuscar from "../Componentes/Codigo_Buscar";
 
 const Buscar = () =>{
     return(
         <div>
-            <h1>Hola, Bienvenido al mercado cultural</h1>
+            <h1 className="text-center">MERCADO CULTURAL</h1>        
             <Menunavegasao />
-            <h1>En esta página se busca</h1>
-        </div>
+            <h2 className="text-center">Encuentra un producto</h2>
+            <div className="container-fluid">
+            <LogicaBuscar />
+            </div>
+
+        </div>     
     )
 }
 
