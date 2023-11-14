@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 const LogicaBuscar = () => {
-  const [productos, setProductos] = useState([]);
+  const [ventas, setventas] = useState([]);
   const [busquedas, setBusquedas] = useState("");
-  const url = "https://prueba-yeison-default-rtdb.firebaseio.com/productos.json";
+  const url = "https://prueba-yeison-default-rtdb.firebaseio.com/ventas.json";
 
   const mostrarDatos = async () => {
     try {
@@ -11,13 +11,13 @@ const LogicaBuscar = () => {
       const datos = await respuesta.json();
 
       // Convierte el objeto de productos a un array
-      const productosArray = Object.keys(datos).map((key) => ({
+      const ventasArray = Object.keys(datos).map((key) => ({
         id: key,
         ...datos[key],
       }));
 
-      setProductos(productosArray);
-      console.log(productosArray);
+      setventas(ventasArray);
+      console.log(ventasArray);
     } catch (error) {
       console.error("Error al obtener los datos:", error);
     }
@@ -32,9 +32,9 @@ const LogicaBuscar = () => {
   }, []);
 
   const results = !busquedas
-    ? productos
-    : productos.filter((producto) =>
-        producto.nombre.toLowerCase().includes(busquedas)
+    ? ventas
+    : ventas.filter((venta) =>
+        venta.cedulacliente.toLowerCase().includes(busquedas)
       );
 
   return (
@@ -43,23 +43,23 @@ const LogicaBuscar = () => {
         value={busquedas}
         onChange={buscador}
         type="text"
-        placeholder="Ingresa el nombre del producto que deseas buscar"
+        placeholder="Ingresa la cedula del cliente a buscar:"
         className="form-control"
       />
       <table className="table table-striped table-hover mt-5 shadow-lg">
         <thead>
           <tr className="bg-curso">
-            <th>NOMBRE</th>
-            <th>PRECIO</th>
-            <th>DESCRIPCIÓN</th>
+            <th>CEDULA:</th>
+            <th>TOTAL A PAGAR:</th>
+            <th>FECHA:</th>
           </tr>
         </thead>
         <tbody>
-          {results.map((producto) => (
-            <tr key={producto.id}>
-              <td>{producto.nombre}</td>
-              <td>{producto.precio}</td>
-              <td>{producto.descripcion}</td>
+          {results.map((venta) => (
+            <tr key={venta.cedulacliente}>
+              <td>{venta.cedulacliente}</td>
+              <td>{venta.totalpagado}</td>
+              <td>{venta.fecha}</td>
             </tr>
           ))}
         </tbody>
@@ -69,3 +69,4 @@ const LogicaBuscar = () => {
 };
 
 export default LogicaBuscar;
+

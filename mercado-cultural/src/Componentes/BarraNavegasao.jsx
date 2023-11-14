@@ -3,26 +3,26 @@ import { Link } from "react-router-dom";
 
 const Menunavegasao = () => {
     return(
-        <div>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to={'/'}>Home</Link>
+        <div className="container-fluid">
+            <nav className="navbar navbar-expand-lg bg-body-tertiary justify-content-center">
+                <ul className="navbar-nav">
+                    <li className="nav-item">
+                        <Link className="nav-link" to={'/'}>Principal</Link>
                     </li>
-                    <li>
-                        <Link to={'/Buscar'}>Buscar</Link>
+                    <li className="nav-item">
+                        <Link className="nav-link" to={'/Buscar'}>Buscar un producto</Link>
                     </li>
-                    <li>
-                        <Link to={'/Historial'}>Historial</Link>
+                    <li className="nav-item">
+                        <Link className="nav-link" to={'/Historial'}>Historial de ventas</Link>
                     </li>
-                    <li>
-                        <Link to={'/Insertar'}>Insertar</Link>
+                    <li className="nav-item">
+                        <Link className="nav-link" to={'/Insertar'}>Insertar un Producto</Link>
                     </li>
-                    <li>
-                        <Link to={'/Modificar'}>Modificar</Link>
+                    <li className="nav-item">
+                        <Link className="nav-link" to={'/Modificar'}>Modificar un Producto</Link>
                     </li>
-                    <li>
-                        <Link to={'/Vender'}>Vender</Link>
+                    <li className="nav-item">
+                        <Link className="nav-link" to={'/Vender'}>Realizar una venta</Link>
                     </li>
                 </ul>
             </nav>

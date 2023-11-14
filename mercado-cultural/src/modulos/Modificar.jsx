@@ -1,12 +1,13 @@
 import React from "react";
 import Menunavegasao from "../Componentes/BarraNavegasao";
+import ModificarProducto from "../Componentes/Codigo_Modificar";
 
 const Modificar = () =>{
     return(
         <div>
-            <h1>Hola, Bienvenido al mercado cultural</h1>
+            <h1 className="display-1 text-center">MERCADO CULTURAL</h1> 
             <Menunavegasao />
-            <h1>En esta página se Modifica</h1>
+            <ModificarProducto />
         </div>
     )
 }

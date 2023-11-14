@@ -12,10 +12,6 @@ code {
     monospace;
 }
 
-
-.bg-curso
-{
-  background-color:rgb(255, 0, 0);
+*{
+  font-family: Montserrat;
 }
-
-

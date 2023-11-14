@@ -1,12 +1,14 @@
 import React from "react";
 import Menunavegasao from "../Componentes/BarraNavegasao";
+import LogicaHistorialVentas from "../Componentes/Codigo_Historial";
 
 const Historial = () =>{
     return(
         <div>
-            <h1>Hola, Bienvenido al mercado cultural</h1>
+            <h1 className="display-1 text-center">MERCADO CULTURAL</h1> 
             <Menunavegasao />
-            <h1>En esta página va el historial</h1>
+            <h2 className="text-center">Encuentra una venta</h2>
+            <LogicaHistorialVentas />
         </div>
     )
 }
