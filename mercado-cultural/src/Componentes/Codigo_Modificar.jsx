@@ -93,38 +93,43 @@ const ModificarProducto = () => {
       </select>
 
       {productoSeleccionado && (
-        <div>
+        <div className='text-center'>
+          <br></br>
           <h3>Modificar {productoSeleccionado.nombre}</h3>
+          
           <label htmlFor="nombre">Nombre:</label>
           <input
+          className="form-control"
             type="text"
             id="nombre"
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
             required
           />
-
+<br></br>
           <label htmlFor="precio">Precio:</label>
           <input
+          className="form-control"
             type="number"
             id="precio"
             value={precio}
             onChange={(e) => setPrecio(e.target.value)}
             required
           />
-
+<br></br>
           <label htmlFor="descripcion">Descripción:</label>
           <textarea
+          className="form-control"
             id="descripcion"
             value={descripcion}
             onChange={(e) => setDescripcion(e.target.value)}
             required
           ></textarea>
-
-          <button type="button" onClick={modificarProducto}>
+<br></br>
+          <button class="btn btn-outline-success" type="button" onClick={modificarProducto}>
             Modificar Producto
           </button>
-          <button type="button" onClick={limpiarFormulario}>
+          <button className="btn btn-outline-warning" type="button" onClick={limpiarFormulario}>
             Limpiar Formulario
           </button>
         </div>

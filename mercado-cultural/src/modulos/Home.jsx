@@ -9,17 +9,25 @@ export default function Home (){
     
     const {isAuthenticated} = useAuth0();
     return(
-        <div>
+        <div className="fondo vh-100 row m-0 text-center justify-content-center">
         {isAuthenticated ?(
             <>
-            <h1 className="display-1 text-center">MERCADO CULTURAL</h1> 
+            
             <Menunavegasao />
-            <h1>Hola, Bienvenido al mercado cultural</h1>
-            <LogoutButton />
+            <div className="col-auto">
+            <h1 >Bienvenido al mercado cultural</h1>    
+            <br></br>        
             <Profile />
-            </>   
+            
+            <LogoutButton />
+      
+            </div>
+
+            </>               
         ):
         <LoginButton />}
+
+
         </div>
     )
 }

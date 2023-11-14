@@ -76,35 +76,44 @@ const RealizarVenta = () => {
   }, []);
 
   return (
-    <div>
+    <div className='text-center'>
       <h2>Realizar Venta</h2>
 
-      <label htmlFor="cedula">Cédula del Cliente:</label>
       <input
+      placeholder='Ingrese la cedula del cliente'
+      className="form-control"
         type="text"
         id="cedula"
         value={clienteCedula}
         onChange={(e) => setClienteCedula(e.target.value)}
         required
       />
-
+<br></br>
       <label>Productos Seleccionados:</label>
-      <ul>
+     
+      <ul className='list-group'>
+      <br></br>
         {productosVenta.map((producto) => (
-          <li key={producto.id}>{producto.nombre} - ${producto.precio}</li>
+          
+          <li className='list-group-item list-group-item-warning'  key={producto.id}>{producto.nombre} - ${producto.precio}</li>
+          
         ))}
       </ul>
-
+      <br></br>
       <p>Total Pagado: ${totalPagado}</p>
 
       <label htmlFor="productos">Seleccionar Producto:</label>
-      <select
+      <br></br>
+      <br></br>
+      <select      
+      className="form-select"
         id="productos"
         onChange={(e) => {
           const productoSeleccionado = productos.find((p) => p.id === e.target.value);
           agregarProductoVenta(productoSeleccionado);
         }}
       >
+        
         <option value="" disabled selected>
           Selecciona un producto
         </option>
@@ -115,10 +124,13 @@ const RealizarVenta = () => {
         ))}
       </select>
 
-      <button type="button" onClick={realizarVenta}>
+<br></br>
+<br></br>
+
+      <button class="btn btn-outline-success" type="button" onClick={realizarVenta}>
         Realizar Venta
       </button>
-      <button type="button" onClick={limpiarFormulario}>
+      <button className="btn btn-outline-warning" type="button" onClick={limpiarFormulario}>
         Limpiar Formulario
       </button>
     </div>

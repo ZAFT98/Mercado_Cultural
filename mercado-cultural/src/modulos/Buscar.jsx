@@ -4,8 +4,7 @@ import LogicaBuscar from "../Componentes/Codigo_Buscar";
 
 const Buscar = () =>{
     return(
-        <div>
-            <h1 className="display-1 text-center">MERCADO CULTURAL</h1>        
+        <div>    
             <Menunavegasao />
             <h2 className="text-center">Encuentra un producto</h2>
             <div className="container-fluid">

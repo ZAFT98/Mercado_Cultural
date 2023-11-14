@@ -48,11 +48,11 @@ const AgregarProducto = () => {
   };
 
   return (
-    <div>
+    <div className='text-center'>
       <h2 className="text-center">Agrega un producto</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="nombre">Nombre:</label>
-        <input
+        <input className="form-control"
+        placeholder='Ingresa el nombre del producto'
           type="text"
           id="nombre"
           value={nombre}
@@ -60,24 +60,26 @@ const AgregarProducto = () => {
           required
         />
 
-        <label htmlFor="precio">Precio:</label>
-        <input
+<br></br>
+
+        <input className="form-control"
+        placeholder='Ingresa el precio del producto'
           type="number"
           id="precio"
           value={precio}
           onChange={(e) => setPrecio(e.target.value)}
           required
         />
-
-        <label htmlFor="descripcion">Descripción:</label>
-        <textarea
+<br></br>
+        <textarea className="form-control"
+        placeholder='Ingresa la descripción del producto'
           id="descripcion"
           value={descripcion}
           onChange={(e) => setDescripcion(e.target.value)}
           required
         ></textarea>
-
-        <button type="submit">Agregar Producto</button>
+<br></br>
+        <button className='btn btn-outline-success' type="submit">Agregar Producto</button>
       </form>
     </div>
   );

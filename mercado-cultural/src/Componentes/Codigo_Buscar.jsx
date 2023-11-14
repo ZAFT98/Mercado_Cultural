@@ -46,9 +46,9 @@ const LogicaBuscar = () => {
         placeholder="Ingresa el nombre del producto que deseas buscar"
         className="form-control"
       />
-      <table className="table table-striped table-hover mt-5 shadow-lg">
+      <table className="table table-warning table-hover mt-5 shadow-lg">
         <thead>
-          <tr className="bg-curso">
+          <tr className="table-danger bg-curso">
             <th>NOMBRE</th>
             <th>PRECIO</th>
             <th>DESCRIPCIÓN</th>

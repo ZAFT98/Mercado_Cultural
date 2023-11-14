@@ -4,7 +4,10 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;  
+  -moz-osx-font-smoothing: grayscale;
+  background-color:#F8F4F2;
+
+
 }
 
 code {
@@ -15,3 +18,16 @@ code {
 *{
   font-family: Montserrat;
 }
+
+.fondo
+{
+  background-image: url(./Imagenes/FondoLogin.png);
+  background-size: 100%;
+}
+
+.navbar
+{
+  font-size: 1.5em;
+  text-decoration: solid;
+}
+

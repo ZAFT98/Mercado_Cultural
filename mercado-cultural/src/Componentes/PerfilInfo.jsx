@@ -12,8 +12,10 @@ const Profile = () => {
     isAuthenticated && (
       <div>
         <img src={user.picture} alt={user.name} />
+        <br></br> 
+        <br></br> 
         <h2>{user.name}</h2>
-        <p>{user.email}</p>
+        <br></br> 
       </div>
     )
   );

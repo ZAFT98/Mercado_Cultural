@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 const Menunavegasao = () => {
     return(
         <div className="container-fluid">
-            <nav className="navbar navbar-expand-lg bg-body-tertiary justify-content-center">
+            <h1 className="display-1 text-center">MERCADO CULTURAL</h1> 
+            <nav className="navbar navbar-expand-lg  justify-content-center">
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <Link className="nav-link" to={'/'}>Principal</Link>

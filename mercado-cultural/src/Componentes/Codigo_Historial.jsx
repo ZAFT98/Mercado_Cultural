@@ -46,9 +46,9 @@ const LogicaBuscar = () => {
         placeholder="Ingresa la cedula del cliente a buscar:"
         className="form-control"
       />
-      <table className="table table-striped table-hover mt-5 shadow-lg">
+      <table className=" table table-info table-hover mt-5 shadow-lg">
         <thead>
-          <tr className="bg-curso">
+          <tr className="table-primary bg-curso">
             <th>CEDULA:</th>
             <th>TOTAL A PAGAR:</th>
             <th>FECHA:</th>
